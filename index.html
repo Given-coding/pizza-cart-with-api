@@ -13,7 +13,7 @@
 
 <body>
 <h1>My Pizza Cart API</h1>
-<img class="cart" src="images/images (2).jpg" alt="">
+<img class="cart" src="img/images (2).jpg" alt="">
 
 <div class='cover' x-data="pizzaCartWithAPIWidget">
     <!-- <div x-text='cartId'></div> -->
@@ -63,14 +63,14 @@
                                     <input class="input" type="number" placeholder="Payment Amount"
                                         x-model="paymentAmount" width=" 50">
                                     <button @click="pay" class="btn">
-                                        <img class="img" src="images/images (1).jpg" width="20" alt="">
+                                        <img class="img" src="img/images (1).jpg" width="20" alt="">
                                         Pay Now</button>
                                 </div>
                             </div>
                         </td>
                         <td>
                             <button x-show = "!payNow" x-on:click =  "payNow = true" x-show class = "btn">
-                                <img class="img" src ="images/images (1).jpg" width="20" alt = "">
+                                <img class="img" src ="img/images (1).jpg" width="20" alt = "">
                                 Pay</button>
                         </td>
                     </tr>
@@ -84,7 +84,7 @@
                 <template x-for="pizza in pizzas">
                     <tr>
                         <td>
-                            <img class='pic' x-bind:src="pizzaImage(pizza)" alt="Sorry, No image">
+                            <img x-bind:src="pizzaImage(pizza)" height="40" alt="">
                         </td>
                         <td x-text="pizza.flavour"></td>
                         <td x-text="pizza.size"></td>
